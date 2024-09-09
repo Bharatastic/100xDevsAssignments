@@ -9,5 +9,21 @@ There is no automated test for this one, this is more for you to understand time
 */
 
 function calculateTime(n) {
+    let sum = 1;
+    
+    const before = new Date().getSeconds();
+
+    for (let i = 0; i < n; i++) {
+        sum = sum + i;
+    }
+    
+    const after = new Date().getSeconds();
+
+    const timeDifference = after - before;
+
+    console.log(`The time taken to calculate sum from 0 to ${n} is ${timeDifference} seconds`);
+
     return 0.01;
 }
+
+calculateTime(1000000000);
